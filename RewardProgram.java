@@ -22,6 +22,8 @@ public class RewardProgram {
             int points = 0;
             double amountOver100 = Math.max(0, transaction.amount - 100);
             double amountOver50 = Math.max(0, transaction.amount - 50);
+            
+            //Update the point if transaction amount > 100 then 2 points plus > 50 then 1 point for each dollor
             points += (int) (2 * amountOver100 + amountOver50);
             
             // Update reward points for the customer
